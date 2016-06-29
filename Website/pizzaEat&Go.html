@@ -5,39 +5,91 @@
     <title>Pizza Eat Go</title>
     <style type="text/css">
         body{
-            width:800px;
+            min-width:800px;
             height:600px;
             background-image:url("Achtergrond.jpg");
+            left: 100px;
         }
-        h1{
-            font-family: Forte;
-            font-size: 40px;
-            font-style: Bold;
-            font-weight: 700;
 
-            text-align:center;
-        }
         fieldset{
             border:1px solid #23B5AF;
+            font-size:18px;
         }
 
-        figure{
-            padding:10px;
-            background-color:red;
+        img {
+            height: 250px;
+            left: 120px;
+            position: absolute;
+            top: 100px;
+            width: 650px;
         }
-        img{
-            width:200px;
+
+        form{
+            border:1px solid #23B5AF;
+           background-color:lightblue;
+            position: absolute;
+            top: 400px;
+            left: 120px;
+            width: 620px;
+            font-family:Arial;
+            padding:10px;
+        }
+        legend {
+            font-weight: bold;
+            font-family:Arial;
+            margin:10px;
+
+        }
+
+        input {
+
+            font-family:Arial;
+            margin:10px;
+
+            padding:5px;
+        }
+
+
+        input[type=submit] {
+            border-radius: 5px;
+            width:150px;
+            height:30px;
+        }
+
+        label {
+            display:inline-block;
+            width:130px;
+            margin-bottom: 10px;
+            padding:5px;
+            font-size:16px;}
+
+        .shortInput {
+            width: 150px;}
+        h1{
+            font-family: Forte;
+            font-size: 44px;
+            font-weight: 700;
+            text-align:center;
+            min-width:800px;
+        }
+
+        #title{
+            background-color:green;
+            font-size:100px;
+
         }
     </style>
+    <script type="text/javascript">
+
+    </script>
 </head>
 <body>
-    <div>
+        <div id="title">
         <h1>Welkom op bij Pizza Eat&Go</h1>
-    </div>
-    <figure>
+        </div>
         <img src="pizza.jpg">
-    </figure>
-    ,<figcaption>bestel pizza's</figcaption>
+        </figure>
+     <figcaption>bestel pizza's</figcaption>
 
     <form name="MyForm">
         <fieldset>
@@ -54,11 +106,16 @@
             <label for="subtotal">Subtotaal(&euro;):</label>
             <input class="shortInput" type="text" id="subTotal" name="Subtotal" /><br />
 
-            <label for="BTW">BT 21%:</label>
+            <label for="BTW">BTW 21%:</label>
             <input type="text" id="BTW" name="BTW" class="shortInput" readonly="readonly" /><br />
 
             <label for="total">Totaalprijs:</label>
             <input type="text" name="total" id="total" class="shortInput" readonly="readonly" />
+        </fieldset>
+        <fieldset>
+            <legend>Bestelling plaatsen</legend>
+
+        <input type="submit" value="Bestelling verzenden" />
         </fieldset>
     </form>
 </body>
