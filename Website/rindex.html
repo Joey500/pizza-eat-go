@@ -44,9 +44,9 @@
             line-height:30px;
             background-color:#000000;
             min-height:250px;
-            min-width:390px;
+            min-width:200px;
             float:left;
-            padding-top:20px;
+            padding: 20px 10px 0px 20px;
             font-size:30px;
             margin: 10px;
             font-family:Arial;
@@ -81,17 +81,47 @@
             margin-right: 30px;
         }
         #Totaal{
+            font: "Accord SF";
+            font-size: large;
+            min-height:30px;
+            min-width:50px;
             float:right;
+            margin-right: 10px;
         }
         #subtotaal{
+            font: "Accord SF";
+            font-size: large;
+            min-height:30px;
+            min-width:50px;
             float:right;
+            margin-right: 10px;
         }
         #BTW{
+            font: "Accord SF";
+            font-size: large;
+            min-height:30px;
+            min-width:50px;
             float:right;
+            margin-right: 10px;
+        }
+        #bereken{
+            font: "Accord SF";
+            font-size: large;
+            min-height:50px;
+            min-width:150px;
+            float:right;
+            margin-right: 10px;
         }
 
 
     </style>
+    <script>
+        berekenen.getElementById("bereken").addEventListener("click", myFunction);
+
+        function myFunction() {
+
+        }
+    </script>
 </head>
 <body>
 <div id="Welkom">
@@ -111,6 +141,9 @@
     <br>
     <span>Aantal pasta's: </span>
     <input id="Ps-ant" type="number" min="0" max="10" >
+    <br>
+    <br>
+    <button id="bereken" type="button" onclick="getElementById('demo').innerHTML=Date()">Bereken prijs</button>
 </div>
 <br>
 <div id="Output">
@@ -122,6 +155,8 @@
     <br>
     <span>Totaal: </span>
     <input id="Totaal" type="text" name="Totaal" value="€"><br>
+    <p id="demo"></p>
+
 </div>
 </body>
 </html>
