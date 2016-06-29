@@ -5,77 +5,123 @@
     <title>Pizza Eat Go</title>
     <style>
         body {
-            width: 800px;
-            height: 1200px;
+            min-width: 800px;
+            min-height: 1200px;
             background-image: url("Achtergrond.jpg");
             background-size: auto;
         }
-        #Div-1{
+        #Welkom{
             line-height:30px;
             background-color:#000000;
-            height:50px;
-            width:800px;
-            align-content: center;
-            padding:5px;
+            min-height:50px;
+            min-width:800px;
+            text-align: center;
+            padding-top: 20px;
+            font-size:50px;
+            font-family:Arial;
+            color:#ffffff
         }
-        #Div-2{
+        #Slide{
             line-height:30px;
             background-color:#000000;
-            height:300px;
-            width:800px;
+            max-width: 100%;
+            height: auto;
+            width: auto;
             float:left;
             padding:5px;
+            font-size:30px;
+            margin: 10px;
+            font-family:Arial;
+            color:#ffffff
+
         }
-        #Div-3{
+        #banner{
+            max-width: 100%;
+            height: auto;
+            width: auto;
+        }
+        #Input{
             line-height:30px;
-            background-color:#ffffff;
-            height:200px;
-            width:375px;
+            background-color:#000000;
+            min-height:250px;
+            min-width:390px;
             float:left;
-            padding:5px;
+            padding-top:20px;
+            font-size:30px;
+            margin: 10px;
+            font-family:Arial;
+            color:#ffffff
         }
-        #Div-4{
+        #Output{
             line-height:30px;
-            background-color:#ffffff;
-            height:200px;
-            width:400px;
+            background-color:#000000;
+            min-height:170px;
+            min-width:390px;
+            float:left;
+            padding:20px;
+            font-size:30px;
+            margin: 10px;
+            font-family:Arial;
+            color:#ffffff
+        }
+        #Pz-ant{
+            font: "Accord SF";
+            font-size: large;
+            min-height:30px;
+            min-width:75px;
             float:right;
-            padding:5px;
+            margin-right: 30px;
+        }
+        #Ps-ant{
+            font: "Accord SF";
+            font-size: large;
+            min-height:30px;
+            min-width:75px;
+            float:right;
+            margin-right: 30px;
+        }
+        #Totaal{
+            float:right;
+        }
+        #subtotaal{
+            float:right;
+        }
+        #BTW{
+            float:right;
         }
 
 
     </style>
 </head>
 <body>
-<div id="Div-1">
-    <span style="color:#ffffff;font-family:Arial;font-size:30px;">Welkom bij Pizza Eat&amp;Go</span>
+<div id="Welkom">
+    <span>Welkom bij Pizza Eat&amp;Go</span>
 </div>
 <br>
-<div id="Div-2">
-    <img src="pizza-banner.png" alt="Pizza banner" width="795">
+<div id="Slide">
+    <img id="banner" src="pizza-pasta-banner.jpg" alt="Pizza banner">
+</div>
+<div id="Input">
+    <span>Kies een aantal: </span>
+    <br>
+    <br>
+    <span>Aantal pizza's: </span>
+    <input id="Pz-ant" type="number" min="0" max="10" align="">
+    <br>
+    <br>
+    <span>Aantal pasta's: </span>
+    <input id="Ps-ant" type="number" min="0" max="10" >
 </div>
 <br>
-<div id="Div-3">
-    <span style="color:#000000;font-family:Arial;font-size:30px;">Kies een aantal: </span>
+<div id="Output">
+    <span>Subtotaal: </span>
+    <input id="subtotaal" type="text" name="subtotaal" value="€"><br>
     <br>
+    <span>BTW: </span>
+    <input id="BTW" type="text" name="BTW" value="€"><br>
     <br>
-    <span style="color:#000000;font-family:Arial;font-size:30px;">Aantal pizza's: </span>
-    <input id="Pz-ant" type="number" maxlength="10" minlength="0" min="0" max="10"height="50">
-    <br>
-    <br>
-    <span style="color:#000000;font-family:Arial;font-size:30px;">Aantal pasta's: </span>
-    <input id="Ps-ant" type="number" maxlength="10" minlength="0" min="0" max="10" height="50">
-</div>
-<br>
-<div id="Div-4">
-    <span style="color:#000000;font-family:Arial;font-size:30px;">Subtotaal: </span>
-    <br>
-    <br>
-    <span style="color:#000000;font-family:Arial;font-size:30px;">BTW: </span>
-    <br>
-    <br>
-    <span style="color:#000000;font-family:Arial;font-size:30px;">Totaal: </span>
-
+    <span>Totaal: </span>
+    <input id="Totaal" type="text" name="Totaal" value="€"><br>
 </div>
 </body>
 </html>
