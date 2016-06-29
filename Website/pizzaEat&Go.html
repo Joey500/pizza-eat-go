@@ -4,14 +4,62 @@
     <meta charset="UTF-8">
     <title>Pizza Eat Go</title>
     <style type="text/css">
+        body{
+            width:800px;
+            height:600px;
+            background-image:url("Achtergrond.jpg");
+        }
+        h1{
+            font-family: Forte;
+            font-size: 40px;
+            font-style: Bold;
+            font-weight: 700;
 
+            text-align:center;
+        }
+        fieldset{
+            border:1px solid #23B5AF;
+        }
 
+        figure{
+            padding:10px;
+            background-color:red;
+        }
+        img{
+            width:200px;
+        }
     </style>
 </head>
 <body>
-<h1>Welkom op bij Pizza Eat&Go</h1>
     <div>
-    <img src="">
-</div>
+        <h1>Welkom op bij Pizza Eat&Go</h1>
+    </div>
+    <figure>
+        <img src="pizza.jpg">
+    </figure>
+    ,<figcaption>bestel pizza's</figcaption>
+
+    <form name="MyForm">
+        <fieldset>
+            <legend>Bestelling</legend>
+            <label for="pizza">Aantal pizza's:</label>
+            <input type="number" id="pizza" name="pizza" value="0" min="0" max="10" step="1"/><br/><br/>
+
+            <label for="pasta">Aantal pasta's:</label>
+            <input type="number" id="pasta" name="pizza" value="0" min="0" max="10" step="1"/><br/>
+        </fieldset>
+
+        <fieldset>
+            <legend>Betalen</legend>
+            <label for="subtotal">Subtotaal(&euro;):</label>
+            <input class="shortInput" type="text" id="subTotal" name="Subtotal" /><br />
+
+            <label for="BTW">BT 21%:</label>
+            <input type="text" id="BTW" name="BTW" class="shortInput" readonly="readonly" /><br />
+
+            <label for="total">Totaalprijs:</label>
+            <input type="text" name="total" id="total" class="shortInput" readonly="readonly" />
+        </fieldset>
+    </form>
 </body>
 </html>
