@@ -116,10 +116,22 @@
 
     </style>
     <script>
-        berekenen.getElementById("bereken").addEventListener("click", myFunction);
-
+      //  berekenen.getElementById("bereken").addEventListener("click", myFunction);
         function myFunction() {
+            const BTW= 0.21;
+            var Price=4.95;
 
+            var NumberOfPizza=parseInt(document.getElementById('Pz-ant').value);
+            var NumberOfPasta=parseInt(document.getElementById('Ps-ant').value);
+
+            var SubTotal=(NumberOfPizza+NumberOfPasta) * Price;
+
+            var CalcBTW= SubTotal * BTW;
+            var Total=CalcBTW + SubTotal;
+
+            document.getElementById('subtotaal').value=SubTotal.toFixed(2);
+            document.getElementById('BTW').value=CalcBTW.toFixed(2);
+            document.getElementById('Totaal').value=Total.toFixed(2);
         }
     </script>
 </head>
@@ -143,7 +155,7 @@
     <input id="Ps-ant" type="number" min="0" max="10" >
     <br>
     <br>
-    <button id="bereken" type="button" onclick="getElementById('demo').innerHTML=Date()">Bereken prijs</button>
+    <button id="bereken" type="button" onclick="myFunction()">Bereken prijs</button>
 </div>
 <br>
 <div id="Output">
