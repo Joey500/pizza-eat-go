@@ -30,13 +30,12 @@
             float:left;
             padding:5px;
             font-size:30px;
-            margin: 10px;
+            margin: 20px;
             font-family:Arial;
             color:#ffffff
 
         }
-        #banner{
-            max-width: 100%;
+        #Banner{
             height: auto;
             width: auto;
         }
@@ -116,13 +115,17 @@
 
     </style>
     <script>
-      //  berekenen.getElementById("bereken").addEventListener("click", myFunction);
+        function onBestelling() {
+            alert("Bestelling verzonden "+);
+        }
+    </script>
+    <script>
         function myFunction() {
             const BTW= 0.21;
             var Price=4.95;
 
-            var NumberOfPizza=document.getElementById('Pz-ant').value;
-            var NumberOfPasta=document.getElementById('Ps-ant').value;
+            var NumberOfPizza=parseInt(document.getElementById('Pz-ant').value);
+            var NumberOfPasta=parseInt(document.getElementById('Ps-ant').value);
 
             var SubTotal=(NumberOfPizza+NumberOfPasta) * Price;
 
@@ -133,6 +136,33 @@
             document.getElementById('BTW').value=CalcBTW.toFixed(2);
             document.getElementById('Totaal').value=Total.toFixed(2);
         }
+
+      var image=['Media/img/B1.jpg','Media/img/B2.jpg','Media/img/B3.jpg','Media/img/B4.jpg','Media/img/B5.jpg','Media/img/B6.jpg','Media/img/B7.jpg','Media/img/B8.jpg','Media/img/B9.jpg','Media/img/B10.jpg'];
+
+      var imageNumber=0;
+      var imageLength=image.length-1;
+      var x ;
+
+      function Image(x){
+          imageNumber+=x;
+          if(imageNumber>imageLength){
+              imageNumber=0;
+
+
+          }
+          if(imageNumber<0){
+              imageNumber=imageLength;
+          }
+          document.getElementById('Banner').src =image[imageNumber];
+          return false;
+
+      }
+
+      function auto(){
+          x=setInterval('Image(1)',3000);
+      }
+
+      auto();
     </script>
 </head>
 <body>
@@ -141,21 +171,21 @@
 </div>
 <br>
 <div id="Slide">
-    <img id="banner" src="pizza-pasta-banner.jpg" alt="Pizza banner">
+    <img id="Banner" src="Media/img/B1.jpg" alt="slider" />
 </div>
 <div id="Input">
     <span>Kies een aantal: </span>
     <br>
     <br>
     <span>Aantal pizza's: </span>
-    <input id="Pz-ant" type="number" min="0" max="10" align="">
+    <input id="Pz-ant" type="number" min="0" max="10" value="0" onclick="myFunction()">
     <br>
     <br>
     <span>Aantal pasta's: </span>
-    <input id="Ps-ant" type="number" min="0" max="10" >
+    <input id="Ps-ant" type="number" min="0" max="10" value="0" onclick="myFunction()" >
     <br>
     <br>
-    <button id="bereken" type="button" onclick="myFunction()">Bereken prijs</button>
+    <button id="bereken" type="button" onclick="onBestelling()">Bevestig bestelling</button>
 </div>
 <br>
 <div id="Output">
