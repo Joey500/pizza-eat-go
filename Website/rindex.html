@@ -118,20 +118,32 @@
         function onBestelling() {
             const BTW= 0.21;
             var Price=4.95;
-
             var NumberOfPizza=parseInt(document.getElementById('Pz-ant').value);
             var NumberOfPasta=parseInt(document.getElementById('Ps-ant').value);
-
             var SubTotal=(NumberOfPizza+NumberOfPasta) * Price;
-
             var CalcBTW= SubTotal * BTW;
             var Total=CalcBTW + SubTotal;
 
-            alert("Bestelling: "+"\n" +
-                    "Pizza's:\t"+NumberOfPizza+"\n" +
-                    "Pasta's:\t"+NumberOfPasta+"\n"+
-                    "Prijs: € "+ Total.toFixed(2)+"\n"+
-            "Succesvol aangevraagd!");
+            if (NumberOfPasta > 0&&NumberOfPizza > 0){
+                alert("Bestelling: "+"\n" +
+                        "Pasta's:\t"+NumberOfPasta+"\n"+
+                        "Pizza's:\t"+NumberOfPizza+"\n" +
+                        "Prijs: € "+ Total.toFixed(2)+"\n"+
+                        "Succesvol aangevraagd!");
+            }
+            else if(NumberOfPasta > 0){
+                alert("Bestelling: "+"\n" +
+                        "Pasta's:\t"+NumberOfPasta+"\n"+
+                        "Prijs: € "+ Total.toFixed(2)+"\n"+
+                        "Succesvol aangevraagd!");
+            }
+            else if(NumberOfPizza > 0){
+                alert("Bestelling: "+"\n" +
+                        "Pizza's:\t"+NumberOfPizza+"\n" +
+                        "Prijs: € "+ Total.toFixed(2)+"\n"+
+                        "Succesvol aangevraagd!");
+            }
+
         }
     </script>
     <script>
