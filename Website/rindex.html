@@ -55,7 +55,7 @@
             line-height:30px;
             background-color:#000000;
             min-height:170px;
-            min-width:390px;
+            min-width:350px;
             float:left;
             padding:20px;
             font-size:30px;
@@ -111,6 +111,34 @@
             float:right;
             margin-right: 10px;
         }
+        #subtotaal{
+            font: "Accord SF";
+            font-size: large;
+            min-height:30px;
+            min-width:100px;
+            width: 100px;
+            float:right;
+            margin-right: 30px;
+        }
+        #BTW{
+            font: "Accord SF";
+            font: "Accord SF";
+            font-size: large;
+            min-height:30px;
+            min-width:100px;
+            width: 100px;
+            float:right;
+            margin-right: 30px;
+        }
+        #Totaal{
+            font: "Accord SF";
+            font-size: large;
+            min-height:30px;
+            min-width:100px;
+            width: 100px;
+            float:right;
+            margin-right: 30px;
+        }
 
 
     </style>
@@ -123,6 +151,7 @@
             var SubTotal=(NumberOfPizza+NumberOfPasta) * Price;
             var CalcBTW= SubTotal * BTW;
             var Total=CalcBTW + SubTotal;
+
 
             if (NumberOfPasta > 0&&NumberOfPizza > 0){
                 alert("Bestelling: "+"\n" +
@@ -159,9 +188,9 @@
             var CalcBTW= SubTotal * BTW;
             var Total=CalcBTW + SubTotal;
 
-            document.getElementById('subtotaal').value=SubTotal.toFixed(2);
-            document.getElementById('BTW').value=CalcBTW.toFixed(2);
-            document.getElementById('Totaal').value=Total.toFixed(2);
+            document.getElementById('subtotaal').value="€\t"+SubTotal.toFixed(2);
+            document.getElementById('BTW').value="€\t"+CalcBTW.toFixed(2);
+            document.getElementById('Totaal').value="€\t"+Total.toFixed(2);
         }
 
       var image=['Media/img/B1.jpg','Media/img/B2.jpg','Media/img/B3.jpg','Media/img/B4.jpg','Media/img/B5.jpg','Media/img/B6.jpg','Media/img/B7.jpg','Media/img/B8.jpg','Media/img/B9.jpg','Media/img/B10.jpg'];
